@@ -83,39 +83,38 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - _TODO: What is the main advantage of automating configuration with Ansible?_
-It allows tasks to be completed quickly without the user remembering syntax.
+#### It allows tasks to be completed quickly without the user remembering syntax.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Install docker.io
-- Install python3-pip
-- Install docker module
-- Increase virtual memory
-- Download and launch a docker elk container
+#### - Install docker.io
+#### - Install python3-pip
+#### - Install docker module
+#### - Increase virtual memory
+#### - Download and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-Screenshot/Docker ps result.PNG
+[Docker ps output](Screenshot/Docker_ps_result.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
-- Web-1
-- Web-2
-- Web-3
+#### - Web-1
+#### - Web-2
+#### - Web-3
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
-- Filebeat
-- Metricbeat
+#### - Filebeat
+#### - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
--	Metricbeat is used to collect changes in the system metric data.    Metrics such as CPU and memory usage are used to track performance.
+#### -	Metricbeat is used to collect changes in the system metric data. Metrics such as CPU and memory usage are used to track performance.
 
--	Filebeat is used to collect logs for changes to the system.  It can collect information such as SSH login attempts to track users logging into the system and if it failed or was successful. 
+#### -	Filebeat is used to collect logs for changes to the system. It can collect information such as SSH login attempts to track users logging into the system and if it failed or was successful. 
 
 
 ### Using the Playbook
@@ -127,18 +126,24 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? 
-  -my_first_playbook.yml
-  -install-elk.yml
-  -filebeat-playbook.yml
-  -metricbeat-playbook.yml
+- _Which file is the playbook?
+
+ #### -my_first_playbook.yml
+ 
+ #### -install-elk.yml
+ 
+ #### -filebeat-playbook.yml
+ 
+ #### -metricbeat-playbook.yml
+ 
 Where do you copy it?_
 Copy it to the /etc/ansible directory
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
-The hosts file located in /etc/ansible. 
+#### The hosts file located in /etc/ansible. 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-In the install-elk.yml file, update the hosts with the name of the elk server group entered in the ansible hosts file. 
-In the filebeat-playbook.yml file, update the hosts with the name of the server group entered in the ansible hosts file.
-- _Which URL do you navigate to in order to check that the ELK server is running? http://40.123.51.91:5601/app/kibana#
+#### In the install-elk.yml file, update the hosts with the name of the elk server group entered in the ansible hosts file. 
+#### In the filebeat-playbook.yml file, update the hosts with the name of the server group entered in the ansible hosts file.
+- _Which URL do you navigate to in order to check that the ELK server is running? 
+#### http://40.123.51.91:5601/app/kibana#
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
