@@ -7,10 +7,13 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
-  -my_first_playbook.yml
-  -install-elk.yml
-  -filebeat-playbook.yml
-  -metricbeat-playbook.yml
+ #### -my_first_playbook.yml
+  
+ #### -install-elk.yml
+  
+ #### -filebeat-playbook.yml
+  
+ #### -metricbeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -26,24 +29,29 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? It helps protect against distributed denial-of-service (DDoS) attacks. What is the advantage of a jump box? It automatically blocks the public ip addresses assoicated with machines in the network.
+- _TODO: What aspect of security do load balancers protect? 
+#### It helps protect against distributed denial-of-service (DDoS) attacks. 
+What is the advantage of a jump box? 
+#### It automatically blocks the public ip addresses assoicated with machines in the network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file names and system metrics.
-- _TODO: What does Filebeat watch for?_ Filebeat monitors for changes in the filesystem.
-- _TODO: What does Metricbeat record?_ Metricbeat monitors for changes in system metrics such CPU usage or system login attempts.
+- _TODO: What does Filebeat watch for?_ 
+#### Filebeat monitors for changes in the filesystem.
+- _TODO: What does Metricbeat record?_ 
+#### Metricbeat monitors for changes in system metrics such CPU usage or system login attempts.
  
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 
-| Name        | Function      | IP Address | Operating System |
-|-------------|---------------|------------|------------------|
-| Jump-Box-VM | Gateway       | 10.1.0.4   | Linux            |
-| Web-1       | Webserver     | 10.1.0.8   | Linux            |
-| Web-2       | Webserver     | 10.1.0.6   | Linux            |
-| Web-3       | Webserver     | 10.1.07    | Linux            |
-| Elk-VM      | Logging       | 10.2.0.5   | Linux            |
-|readteamlb   | Load balancer | 13.90.32.92| N/A              |
+ | Name        | Function      | IP Address | Operating System |
+ |-------------|---------------|------------|------------------|
+ | Jump-Box-VM | Gateway       | 10.1.0.4   | Linux            |
+ | Web-1       | Webserver     | 10.1.0.8   | Linux            |
+ | Web-2       | Webserver     | 10.1.0.6   | Linux            |
+ | Web-3       | Webserver     | 10.1.07    | Linux            |
+ | Elk-VM      | Logging       | 10.2.0.5   | Linux            |
+ |readteamlb   | Load balancer | 13.90.32.92| N/A              |
 
 
 ### Access Policies
@@ -51,21 +59,25 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the readteamlb load balancer and Elk-VM machines can accept connections from the Internet. Access to these machines is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_ - 67.191.186.89
+- _TODO: Add whitelisted IP addresses_ - 
+#### 67.191.186.89
 
 Machines within the network can only be accessed by Jump-Box-VM.
-- _TODO: Which machine did you allow to access your ELK VM? My Workstation What was its IP address?_67.191.186.89
+- _TODO: Which machine did you allow to access your ELK VM? 
+#### My Workstation 
+What was its IP address?_
+#### 67.191.186.89
 
 A summary of the access policies in place can be found in the table below.
 
-| Name        | Publicly Accessible | Allowed IP Addresses    |
-|-------------|---------------------|-------------------------|
-| Jump-Box-VM | No                  | 67.191.186.89           |
-| Web-1       | No                  | 10.1.0.4,10.2.0.5       |
-| Web-2       | No                  | 10.1.0.4,10.2.0.5       |
-| Web-3       | No                  | 10.1.0.4,10.2.0.5       |
-| Elk-VM      | Yes                 | 67.191.186.89, 10.1.0.4 |
-| readteamlb  | Yes                 | 67.191.186.89           |
+ | Name        | Publicly Accessible | Allowed IP Addresses    |
+ |-------------|---------------------|-------------------------|
+ | Jump-Box-VM | No                  | 67.191.186.89           |
+ | Web-1       | No                  | 10.1.0.4,10.2.0.5       |
+ | Web-2       | No                  | 10.1.0.4,10.2.0.5       |
+ | Web-3       | No                  | 10.1.0.4,10.2.0.5       |
+ | Elk-VM      | Yes                 | 67.191.186.89, 10.1.0.4 |
+ | readteamlb  | Yes                 | 67.191.186.89           |
 
 ### Elk Configuration
 
